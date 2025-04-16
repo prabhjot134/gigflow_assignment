@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetGigFlow - Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4657ce;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #4657ce;
+            box-shadow: 0 0 5px rgba(70, 87, 206, 0.3);
+        }
+        
+        .error {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: #4657ce;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #3a49b0;
+        }
+        
+        .thank-you {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .thank-you h2 {
+            color: #4657ce;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">GigFlow</div>
+            <h1>Gig Worker Sign-Up</h1>
+            <p>Join our platform and start finding gigs that match your skills</p>
+        </header>
+        
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name">
+                <div class="error" id="name-error">Please enter your full name</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" >
+                <div class="error" id="email-error">Please enter a valid email address</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="skill">Skill Category</label>
+                <select id="skill" name="skill" style="cursor: pointer">
+                    <option value="">Select a skill category</option>
+                    <option value="design">Design</option>
+                    <option value="development">Development</option>
+                    <option value="writing">Writing</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="admin">Administrative</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="error" id="skill-error">Please select a skill category</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="portfolio">Portfolio Link</label>
+                <input type="url" id="portfolio" name="portfolio">
+                <div class="error" id="portfolio-error">Please enter a valid URL</div>
+            </div>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+        
+        <div class="thank-you" id="thank-you">
+            <h2>Thank You for Signing Up!</h2>
+            <p>Your application has been submitted successfully. We'll review your information and get back to you soon.</p>
+        </div>
+    </div>
+    
+    <script src="signup.js"></script>
+</body>
+</html>
